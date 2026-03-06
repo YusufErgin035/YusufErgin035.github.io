@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1,
+h3,
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+  border-bottom: 3px solid #dddddd;
+  padding: 15px 40px;
+  overflow: hidden;
+}
+
+.navbar .logo {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 45px;
+}
+
+.navbar ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  line-height: 45px;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #555;
+  padding: 10px 22px;
+  display: inline-block;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:not(.active):hover {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.navbar ul li a.active {
+  background-color: #8da3cf;
+  color: white;
+}
+
+.page-header {
+  border-bottom: 1px solid #ddd;
+  margin: 20px 0;
+  padding-bottom: 15px;
+}
+
+/* Kutuların dış çerçevesi */
+.container {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  margin-top: 20px;
+}
+
+/* Her iki kutu için ortak ayarlar */
+.content-box,
+.sidebar-box {
+  display: inline-block; /* Yan yana gelmeleri için şart */
+  vertical-align: top; /* Üst hizalamayı eşitler */
+  width: 48%; /* İkisini de aynı hacimde/genişlikte yapar */
+  min-height: 300px; /* Yükseklik farkını ortadan kaldırır */
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box; /* Padding'in kutuyu şişirmesini engeller */
+}
+
+/* Sarı Kutuyu Sola Yasla ve Sınırla */
+.content-box {
+  background-color: #fef5d8;
+  margin-right: 3%; /* İki kutu arasındaki boşluk */
+}
+
+/* Mavi Kutuyu Sağa Yerleştir */
+.sidebar-box {
+  background-color: #e8f4f8;
+}
+.content-box h2 {
+  border-bottom: 3px solid #f7e29d;
+}
+.sidebar-box h2 {
+  border-bottom: 3px solid #a6e3f7;
+}
+
+.content-box p, 
+.sidebar-box p {
+  font-size: 15px;
+  text-align: justify;
+}
+
+/* --- FOOTER --- */
+.page-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #eee;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
