@@ -64,51 +64,58 @@ p {
   padding-bottom: 15px;
 }
 
-/* Kutuların dış çerçevesi */
 .container {
   width: 100%;
-  overflow: hidden;
-  display: block;
   margin-top: 20px;
+  display: block;
 }
 
-/* Her iki kutu için ortak ayarlar */
+/* Her İki Kutu İçin ORTAK (Yan Yana Dizme Kuralı) */
 .content-box,
 .sidebar-box {
-  display: inline-block; /* Yan yana gelmeleri için şart */
-  vertical-align: top; /* Üst hizalamayı eşitler */
-  width: 48%; /* İkisini de aynı hacimde/genişlikte yapar */
-  min-height: 300px; /* Yükseklik farkını ortadan kaldırır */
+  display: inline-block; /* Yan yana gelmeleri için en kritik kod */
+  vertical-align: top;
+  width: 48%; /* Ekranı ikiye böler */
+  min-height: 250px;
   padding: 25px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  box-sizing: border-box; /* Padding'in kutuyu şişirmesini engeller */
+  box-sizing: border-box; /* Padding'in kutuyu şişirmesini kesinlikle önler */
 }
 
-/* Sarı Kutuyu Sola Yasla ve Sınırla */
+/* Sarı Kutu (Sol) */
 .content-box {
   background-color: #fef5d8;
-  margin-right: 3%; /* İki kutu arasındaki boşluk */
+  margin-right: 3%; /* İki kutu arasına %3 boşluk bırakır (48+48+3 = 99) */
 }
 
-/* Mavi Kutuyu Sağa Yerleştir */
+/* Mavi Kutu (Sağ) */
 .sidebar-box {
   background-color: #e8f4f8;
 }
+
+/* Kutuların içindeki H2 başlık çizgileri */
 .content-box h2 {
   border-bottom: 3px solid #f7e29d;
+  padding-bottom: 5px;
 }
 .sidebar-box h2 {
   border-bottom: 3px solid #a6e3f7;
+  padding-bottom: 5px;
 }
 
-.content-box p, 
+.content-box p,
 .sidebar-box p {
   font-size: 15px;
   text-align: justify;
 }
 
-/* --- FOOTER --- */
+.one-box {
+  display: block !important;
+  margin: 20px auto !important;
+  width: 70% !important;
+}
+
 .page-footer {
   text-align: center;
   margin-top: 40px;
@@ -116,4 +123,90 @@ p {
   background-color: #eee;
   border-top: 1px solid #ddd;
   font-size: 14px;
+}
+
+.contact-container {
+  width: 60%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.contact-container input,
+.contact-container select,
+.contact-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.contact-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-buttons {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  display: inline-block;
+  width: 48%;
+  padding: 12px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.btn-submit {
+  background-color: #007bff;
+  margin-right: 3%;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.btn-clear {
+  background-color: #dc3545;
+}
+
+.btn-clear:hover {
+  background-color: #c82333;
+}
+
+.contact-container input[type="file"] {
+  background-color: #f8f9fa;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.contact-container input[type="file"]::file-selector-button {
+  background-color: #8da3cf;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+.contact-container input[type="file"]::file-selector-button:hover {
+  background-color: #7a8eb8;
 }
