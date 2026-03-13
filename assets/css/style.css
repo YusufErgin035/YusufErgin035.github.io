@@ -87,11 +87,13 @@ p {
 .content-box {
   background-color: #fef5d8;
   margin-right: 3%; /* İki kutu arasına %3 boşluk bırakır (48+48+3 = 99) */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Mavi Kutu (Sağ) */
 .sidebar-box {
   background-color: #e8f4f8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Kutuların içindeki H2 başlık çizgileri */
@@ -130,7 +132,7 @@ p {
   margin: 40px auto;
   padding: 30px;
   background-color: #ffffff;
-
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   border-radius: 12px;
   box-sizing: border-box;
