@@ -5,39 +5,87 @@
     <meta charset="UTF-8" />
     <title>Hoşgeldiniz</title>
   </head>
-  <header class="navbar">
-    <div class="logo">
-      Yusuf Tunahan Ergin<br />
-      Bilgisayar Mühendisliği | 3. Sınıf
+  <body>
+    <div class="wrapper">
+      <nav class="navbar-container">
+        <div class="navbar-top">
+          <div class="logo">
+            Yusuf Tunahan Ergin<br />
+            Bilgisayar Mühendisliği | 3. Sınıf
+          </div>
+
+          <ul>
+            <li><a href="../index.html" class="active">Anasayfa</a></li>
+            <li><a href="../pages/about.html">Hakkımda</a></li>
+            <li><a href="../pages/interests.html">İlgi Alanlarım</a></li>
+            <li><a href="../pages/contact.html">İletişim</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="hero-container">
+        <div class="hero-main">
+          <div class="hero-left">
+            <h2>Hoşgeldiniz!</h2>
+            <p>
+              Bu benim kişisel web sitem. Burada kendim hakkında bilgi
+              bulabilir, ilgi alanlarımı keşfedebilir ve benimle iletişime
+              geçebilirsiniz.
+            </p>
+            <button class="hero-btn">Buton</button>
+          </div>
+          <div class="hero-right">
+            <div class="image-icon"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-container">
+        <div class="section-header">
+          <h3>Projelerim</h3>
+        </div>
+        <div class="cards-wrapper">
+          <div class="card">
+            <h3>Proje 1</h3>
+            <p>Bu, benim ilk projemin açıklamasıdır.</p>
+          </div>
+          <div class="card">
+            <h3>Proje 2</h3>
+            <p>Bu, benim ikinci projemin açıklamasıdır.</p>
+          </div>
+          <div class="card">
+            <h3>Proje 3</h3>
+            <p>Bu, benim üçüncü projemin açıklamasıdır.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex-grow-container">
+        <div class="section-header">
+          <h3>Beni Tanı</h3>
+        </div>
+        <div class="grow-boxes">
+          <div class="grow-box blue-box">
+            <h4>Başlık</h4>
+            <p>Benimle ilgili şeyler</p>
+            <button class="card-btn">Buton</button>
+          </div>
+          <div class="grow-box green-box">
+            <h4>Başlık</h4>
+            <p>Geçmişim</p>
+            <button class="card-btn green-btn">Buton</button>
+          </div>
+          <div class="grow-box orange-box">
+            <h4>Başlık</h4>
+            <p>İlgi alanım</p>
+            <button class="card-btn orange-btn">Buton</button>
+          </div>
+        </div>
+      </section>
     </div>
-    <nav>
-      <ul>
-        <li><a href="../index.html" class="active">Anasayfa</a></li>
-        <li><a href="../pages/about.html">Hakkımda</a></li>
-        <li><a href="../pages/interests.html">İlgi Alanlarım</a></li>
-        <li><a href="../pages/contact.html">İletişim</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="container">
-    <main class="content-box">
-      <h2>Hoşgeldiniz!</h2>
-      <p>
-        Bu benim kişisel web sitem. Burada kendim hakkında bilgi bulabilir, ilgi
-        alanlarımı keşfedebilir ve benimle iletişime geçebilirsiniz.
-      </p>
-    </main>
-    <main class="sidebar-box">
-      <h2>Hızlı Bilgiler</h2>
-      <ul>
-        <li>Ad: Yusuf Tunahan Ergin</li>
-        <li>Meslek: Bilgisayar Mühendisliği Öğrencisi</li>
-        <li>İlgi Alanları: Web Geliştirme, Yazılım Mühendisliği, Yapay Zekâ</li>
-      </ul>
-    </main>
-  </div>
-  <hr />
-  <footer>
-    <p>&copy; 2024 Yusuf Tunahan Ergin. Tüm hakları saklıdır.</p>
-  </footer>
+
+    <footer class="footer-container">
+      <p>&copy; 2024 Yusuf Tunahan Ergin. Tüm hakları saklıdır.</p>
+    </footer>
+  </body>
 </html>

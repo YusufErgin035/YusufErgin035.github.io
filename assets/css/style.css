@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-color: #d8d8dc;
   margin: 0;
   padding: 20px;
   color: #333;
@@ -13,33 +13,67 @@ p {
   margin-bottom: 10px;
 }
 
-.navbar {
-  background-color: #f8f9fa;
-  border-bottom: 3px solid #dddddd;
-  padding: 15px 40px;
-  overflow: hidden;
+.wrapper {
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.navbar .logo {
-  float: left;
+.cards-container,
+.flex-grow-container,
+.hero-container,
+.navbar-container,
+.footer-container {
+  background-color: #f4f4f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-container {
+  height: 10vh;
+  justify-content: space-between;
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  flex-grow: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  flex-grow: 1;
+}
+
+.navbar-container .logo {
   font-size: 24px;
   font-weight: bold;
-  line-height: 45px;
+  color: #4a4a5e;
 }
 
-.navbar ul {
+.navbar-container ul {
   float: right;
   margin: 0;
   padding: 0;
   line-height: 45px;
 }
 
-.navbar ul li {
+.navbar-container ul li {
   display: inline-block;
   margin-left: 10px;
 }
 
-.navbar ul li a {
+.navbar-container ul li a {
   text-decoration: none;
   color: #555;
   padding: 10px 22px;
@@ -48,14 +82,188 @@ p {
   transition: 0.3s;
 }
 
-.navbar ul li a:not(.active):hover {
+.navbar-container ul li a:not(.active):hover {
   background-color: #e9ecef;
   color: #000;
 }
 
-.navbar ul li a.active {
+.navbar-container ul li a.active {
   background-color: #8da3cf;
   color: white;
+}
+
+.hero-container {
+  height: 30vh;
+}
+
+.hero-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-grow: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 70%;
+}
+
+.hero-left h2 {
+  color: #4a4a5e;
+  font-size: 22px;
+}
+
+.hero-left p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.skeleton-line {
+  background-color: #e2e2e9;
+  height: 6px;
+  border-radius: 3px;
+}
+.skeleton-line.long {
+  width: 80%;
+}
+.skeleton-line.short {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.hero-btn {
+  background-color: #7ba2e3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  width: max-content;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hero-right {
+  width: 30%;
+  background-color: #e2e2e9;
+  border: 1px solid #d5d5df;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  height: 30vh;
+}
+.flex-grow-container {
+  height: 50vh;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+}
+
+.section-header h3 {
+  color: #4a4a5e;
+}
+.header-pills {
+  display: flex;
+  gap: 10px;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 15px 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  flex: 1 1 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-btn {
+  background-color: #7ba2e3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.section-bottom-pills {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+}
+
+.image-icon {
+  font-size: 400px;
+  opacity: 0.3;
+}
+
+.grow-boxes {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  padding: 15px 20px;
+  flex-grow: 1;
+}
+
+.grow-box {
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.blue-box {
+  background-color: #dbe7f4;
+  flex-grow: 1;
+}
+.green-box {
+  background-color: #d7ead3;
+  flex-grow: 2;
+}
+.orange-box {
+  background-color: #fce4ce;
+  flex-grow: 1;
+}
+
+.green-btn {
+  background-color: #82b578;
+}
+.orange-btn {
+  background-color: #eca876;
 }
 
 .page-header {
@@ -70,33 +278,29 @@ p {
   display: block;
 }
 
-/* Her İki Kutu İçin ORTAK (Yan Yana Dizme Kuralı) */
 .content-box,
 .sidebar-box {
-  display: inline-block; /* Yan yana gelmeleri için en kritik kod */
+  display: inline-block;
   vertical-align: top;
-  width: 48%; /* Ekranı ikiye böler */
+  width: 48%;
   min-height: 250px;
   padding: 25px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  box-sizing: border-box; /* Padding'in kutuyu şişirmesini kesinlikle önler */
+  box-sizing: border-box;
 }
 
-/* Sarı Kutu (Sol) */
 .content-box {
   background-color: #fef5d8;
-  margin-right: 3%; /* İki kutu arasına %3 boşluk bırakır (48+48+3 = 99) */
+  margin-right: 3%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Mavi Kutu (Sağ) */
 .sidebar-box {
   background-color: #e8f4f8;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Kutuların içindeki H2 başlık çizgileri */
 .content-box h2 {
   border-bottom: 3px solid #f7e29d;
   padding-bottom: 5px;
@@ -118,13 +322,11 @@ p {
   width: 70% !important;
 }
 
-.page-footer {
-  text-align: center;
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #eee;
-  border-top: 1px solid #ddd;
-  font-size: 14px;
+.footer-container {
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+  color: #555;
 }
 
 .contact-container {
