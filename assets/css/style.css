@@ -19,6 +19,133 @@ p {
   flex-direction: column;
 }
 
+@keyframes glitter {
+  0% {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+}
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 5px rgba(24, 25, 26, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(56, 66, 72, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(24, 25, 26, 0.5);
+  }
+}
+
+@keyframes fade {
+  0% {
+    background-color: #9355f7;
+  } /* Ana Mor */
+  50% {
+    background-color: #b07cfb;
+  } /* Daha Açık Mor */
+  100% {
+    background-color: #9355f7;
+  }
+}
+
+.back-btn {
+  background-color: #4285fa;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  width: max-content;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  animation: glitter 2s infinite ease-in-out;
+}
+.back-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+  letter-spacing: 1px;
+  cursor: grab;
+}
+
+.ad-container {
+  background-color: #9355f7;
+  position: fixed;
+  padding: 20px;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
+  animation: fade 4s infinite ease-in-out;
+}
+
+.ad-container p,
+.ad-container ul {
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  width: 50%;
+  text-align: left;
+}
+
+.ad-container .buttonish {
+  background-color: #87c0b1;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  position: absolute;
+  top: 180px;
+  left: 460px;
+  cursor: grab;
+  padding: 8px 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  animation: shadow 2s infinite ease-in-out;
+}
+
+.ad-container .circle {
+  width: 200px;
+  height: 220px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  left: 520px;
+  opacity: 0.3;
+  z-index: -1;
+}
+.ad-btn {
+  background-color: #4285fa;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  width: max-content;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.ad-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  color: #333;
+}
+.ad-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+  letter-spacing: 1px;
+  cursor: grab;
+}
+
 .cards-container,
 .flex-grow-container,
 .hero-container,
@@ -147,6 +274,21 @@ p {
   width: max-content;
   cursor: pointer;
   font-size: 14px;
+  transition: all 0.3s ease;
+
+  animation: glitter 2s infinite ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+  letter-spacing: 1px;
+  cursor: grab;
+}
+
+.hero-btn:active {
+  transform: scale(0.95);
+  background-color: #1c598a;
 }
 
 .hero-right {
