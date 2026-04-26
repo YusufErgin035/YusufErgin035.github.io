@@ -30,6 +30,7 @@ p {
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
   }
 }
+
 @keyframes shadow {
   0% {
     box-shadow: 0 0 5px rgba(24, 25, 26, 0.5);
@@ -67,6 +68,7 @@ p {
 
   animation: glitter 2s infinite ease-in-out;
 }
+
 .back-btn:hover {
   background-color: #2980b9;
   transform: translateY(-5px);
@@ -121,6 +123,7 @@ p {
   opacity: 0.3;
   z-index: -1;
 }
+
 .ad-btn {
   background-color: #4285fa;
   color: white;

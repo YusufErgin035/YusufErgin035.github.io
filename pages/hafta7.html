@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafta 7 Ödev</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="m-0 p-0 bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">WP Lab</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cards-section">Atölyeleri</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#form-section">Başvuru</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#result-section">Sonuç</a>
+            </li>
+            <li class="nav-item ms-3">
+              <div class="btn-group" role="group">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="navTheme"
+                  id="navLightTheme"
+                  value="light"
+                  checked
+                />
+                <label class="btn btn-sm btn-outline-light" for="navLightTheme"
+                  >☀️</label
+                >
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="navTheme"
+                  id="navDarkTheme"
+                  value="dark"
+                />
+                <label class="btn btn-sm btn-outline-light" for="navDarkTheme"
+                  >🌙</label
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid py-5">
+      <!-- Başlık -->
+      <section class="container mb-5">
+        <h1 class="display-4 fw-bold mb-3">
+          Bootstrap ve JavaScript ile Etkinlik Kayıt Sayfası
+        </h1>
+        <p class="text-secondary fs-5">
+          Bu sayfa Bootstrap ile responsive bir tasarım ve JavaScript ile
+          interaktif özellikler içermektedir.
+        </p>
+      </section>
+
+      <!-- Card Bileşenleri -->
+      <section id="cards-section" class="container mb-5">
+        <h2 class="mb-4">Atölyeleri</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Bootstrap Temelleri</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Bootstrap grid sistemi, typography ve utility sınıflarını
+                  öğrenin.
+                </p>
+                <p class="text-muted small">Süre: 2 saat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-success text-white">
+                <h5 class="mb-0">JavaScript Etkileşimleri</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  DOM manipülasyonu, event handling ve form validasyonu yapın.
+                </p>
+                <p class="text-muted small">Süre: 3 saat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Responsive Tasarım</h5>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  Mobil first yaklaşımı ile çoklu cihazlar için tasarım yapın.
+                </p>
+                <p class="text-muted small">Süre: 2.5 saat</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form Alanları -->
+      <section id="form-section" class="container mb-5">
+        <h2 class="mb-4">Atölye Başvurusu</h2>
+        <div class="row">
+          <div class="col-lg-8">
+            <form id="registrationForm" class="card shadow-sm p-4">
+              <!-- Ad Soyad -->
+              <div class="mb-3">
+                <label for="fullname" class="form-label fw-semibold"
+                  >Ad Soyad</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullname"
+                  placeholder="Adınız ve soyadınızı girin"
+                  required
+                />
+              </div>
+
+              <!-- E-posta -->
+              <div class="mb-3">
+                <label for="email" class="form-label fw-semibold"
+                  >E-posta</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="ornek@example.com"
+                  required
+                />
+              </div>
+
+              <!-- Seçim Yapılan Atölye -->
+              <div class="mb-3">
+                <label for="workshop" class="form-label fw-semibold"
+                  >Atölye Seçimi</label
+                >
+                <select class="form-select" id="workshop" required>
+                  <option selected disabled value="">Seçiniz...</option>
+                  <option value="bootstrap">Bootstrap Temelleri</option>
+                  <option value="javascript">JavaScript Etkileşimleri</option>
+                  <option value="responsive">Responsive Tasarım</option>
+                </select>
+              </div>
+
+              <!-- Katılım Onayı -->
+              <div class="mb-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="agree"
+                    required
+                  />
+                  <label class="form-check-label" for="agree">
+                    Şartları kabul ediyorum
+                  </label>
+                </div>
+              </div>
+
+              <!-- Notlar / Açıklamalar -->
+              <div class="mb-4">
+                <label for="notes" class="form-label fw-semibold"
+                  >Notlar / Açıklamalar (İsteğe Bağlı)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="notes"
+                  rows="4"
+                  placeholder="Katılmak istediğiniz atölye hakkında notlar yazabilirsiniz..."
+                ></textarea>
+              </div>
+
+              <!-- Butonlar -->
+              <div class="d-grid gap-2 d-sm-flex">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Başvuruyu Gönder
+                </button>
+                <button type="reset" class="btn btn-secondary btn-lg">
+                  Temizle
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Uyarı Mesajları -->
+          <div class="col-lg-4">
+            <div id="warnings" class="alert alert-warning d-none">
+              <h6 class="alert-heading">Lütfen Dikkat!</h6>
+              <ul id="warningList" class="mb-0"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sonuç Alanı -->
+      <section id="result-section" class="container mb-5">
+        <h2 class="mb-4">Başvuru Özeti</h2>
+        <div id="resultArea" class="alert alert-info d-none">
+          <h5>Başvurunuz Alındı!</h5>
+          <div id="resultContent"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/scripts/hafta7.js"></script>
+  </body>
+</html>
