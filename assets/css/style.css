@@ -381,6 +381,7 @@ p {
 }
 
 .grow-box {
+  flex: 1;
   border-radius: 5px;
   padding: 15px;
   display: flex;
@@ -393,15 +394,12 @@ p {
 
 .blue-box {
   background-color: #dbe7f4;
-  flex-grow: 1;
 }
 .green-box {
   background-color: #d7ead3;
-  flex-grow: 2;
 }
 .orange-box {
   background-color: #fce4ce;
-  flex-grow: 1;
 }
 
 .green-btn {

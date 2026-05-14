@@ -1,0 +1,138 @@
+:root {
+  --ink: #1f2937;
+  --muted: #4b5563;
+  --panel: #ffffff;
+  --line: #d1d5db;
+  --brand: #0ea5a5;
+  --brand-hover: #0f766e;
+  --success-bg: #dcfce7;
+  --success-text: #166534;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  color: var(--ink);
+  background-color: #f3f4f6;
+}
+
+.app-container {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  width: min(430px, 100%);
+  padding: 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: var(--panel);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card h1,
+.card h2 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+  letter-spacing: 0.01em;
+}
+
+.card p {
+  margin: 5px 0;
+  color: var(--muted);
+}
+
+.card button {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 4px 0 2px;
+  transition: background-color 0.2s ease;
+}
+
+.card button:hover {
+  background: var(--brand-hover);
+}
+
+.card input[type="text"],
+.card input[type="number"],
+.card select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 11px 12px;
+  background-color: #fff;
+  font-size: 0.98rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card input[type="text"]:focus,
+.card input[type="number"]:focus,
+.card select:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.18);
+}
+
+.result-box {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border-radius: 10px;
+  border: 1px solid #b7ebd1;
+  font-weight: 700;
+  text-align: center;
+  display: none;
+}
+
+.result-box h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.result-box p {
+  margin: 5px 0;
+  color: var(--success-text);
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.result small {
+  display: block;
+  font-weight: 600;
+  opacity: 0.85;
+  margin-top: 5px;
+}

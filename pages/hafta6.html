@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uygulama 6: Not Hesaplama ve Birim Dönüştürücü</title>
+    <link rel="stylesheet" href="../assets/css/hafta6.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <main class="card">
+        <h1>Not Hesaplama</h1>
+        <input type="text" id="adSoyad" placeholder="Ad Soyad giriniz" />
+        <input
+          type="number"
+          id="vizeNotu"
+          placeholder="Vize notunu giriniz"
+          min="0"
+          max="100"
+        />
+        <input
+          type="number"
+          id="finalNotu"
+          placeholder="Final notunu giriniz"
+          min="0"
+          max="100"
+        />
+        <button onclick="notHesapla()">Hesapla</button>
+        <div class="result-box" id="sonucAlani">
+          <h3 id="sonucAd"></h3>
+          <p id="sonucOrt">Ortalama:</p>
+          <p id="sonucHarf">Harf Notu:</p>
+          <p id="sonucDurum">Durum:</p>
+        </div>
+      </main>
+
+      <main class="card">
+        <h2>Birim Dönüştürücü</h2>
+
+        <div class="form-group">
+          <label for="deger">Deger Giriniz</label>
+          <input type="number" id="deger" value="50" step="any" />
+        </div>
+
+        <div class="form-group">
+          <label for="donusumTipi">Donüşüm Tipi</label>
+          <select id="donusumTipi">
+            <option value="c2f">Celsius -> Fahrenheit</option>
+            <option value="m2km">Metre -> Kilometre</option>
+            <option value="kg2g">Kilogram -> Gram</option>
+          </select>
+        </div>
+
+        <button id="hesaplaBtn" type="button">Hesapla</button>
+
+        <div class="result-box result" id="birimSonucAlani">
+          Sonuç: <span id="sonucDegeri"></span>
+          <small id="sonucDetay"></small>
+        </div>
+      </main>
+    </div>
+
+    <script src="../assets/scripts/hafta6.js"></script>
+  </body>
+</html>
